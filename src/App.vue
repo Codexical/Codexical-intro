@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <AppBar />
-    <v-main style="margin-top: 5em;">
+    <v-main style="margin-top: 6vh;">
       <router-view />
     </v-main>
     <FooterView />
