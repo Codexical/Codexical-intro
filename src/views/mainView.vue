@@ -21,32 +21,39 @@
         <v-main>
             <v-container>
                 <v-row>
-                    <v-col cols="12" md="4">
+                    <v-col cols="12" md="5">
                         <h2 class="text-h1 text-md-h1 font-weight-bold my-6">
                             Meet Our Team.
                         </h2>
                         <div class="text-body-1 text-medium-emphasis mb-10">
-                            We are a group of creative artisans who are passionate about web art, focusing on seamlessly
-                            blending technology with aesthetics to create unique digital experiences for you. We believe
-                            that every website is an unfinished canvas, and our mission is to breathe life and soul into
+                            We are a group of creative artisans who are passionate about web art, focusing on
+                            seamlessly
+                            blending technology with aesthetics to create unique digital experiences for you. We
+                            believe
+                            that every website is an unfinished canvas, and our mission is to breathe life and soul
+                            into
                             it.
                         </div>
                     </v-col>
-                    <v-col cols="12" md="8">
-                        <v-row>
+                    <v-col cols="12" md="7">
+                        <v-row class="">
                             <v-col cols="12" v-for="member in teamMembers" :key="member.name">
-                                <v-card class="mb-4 pa-3" elevation="2">
-                                    <v-row>
-                                        <v-col cols="4">
-                                            <v-img :src="member.image" aspect-ratio="1"></v-img>
-                                        </v-col>
-                                        <v-col cols="8">
-                                            <h3>{{ member.name }}</h3>
-                                            <h4>{{ member.position }}</h4>
-                                            <p>{{ member.description }}</p>
-                                        </v-col>
-                                    </v-row>
-                                </v-card>
+                                <div v-motion :initial="{ opacity: 0, x: -100 }"
+                                    :visible-once="{ opacity: 1, x: 0, scale: 1 }" :hovered="{ scale: 1.05 }"
+                                    :duration="500">
+                                    <v-card class="mb-4 pa-3" elevation="2">
+                                        <v-row>
+                                            <v-col cols="4">
+                                                <v-img :src="member.image" aspect-ratio="1"></v-img>
+                                            </v-col>
+                                            <v-col cols="8">
+                                                <h3>{{ member.name }}</h3>
+                                                <h4>{{ member.position }}</h4>
+                                                <p>{{ member.description }}</p>
+                                            </v-col>
+                                        </v-row>
+                                    </v-card>
+                                </div>
                             </v-col>
                         </v-row>
                     </v-col>
