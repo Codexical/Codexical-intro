@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar style="padding: 2em;" color="#212121">
+    <v-app-bar style="padding: 3vh;" color="#212121">
         <v-img src="https://avatars.githubusercontent.com/u/138449305" max-width="100"></v-img>
         <v-toolbar-title class="font-weight-black text-orange">Codexical</v-toolbar-title>
         <div id="computer">
