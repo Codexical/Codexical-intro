@@ -10,6 +10,14 @@ const routes = [
     },
   },
   {
+    path: "/contact",
+    name: "contact",
+    component: () => import("../views/contactUs.vue"),
+    meta: {
+      title: "ContactUs",
+    },
+  },
+  {
     path: "/:catchAll(.*)",
     name: "404",
     component: () => import("../views/notFound.vue"),
