@@ -1,12 +1,13 @@
 const express = require('express');
-const cors = require('cors');
 const nodemailer = require('nodemailer');
-
-const router = express.Router();
+const app = express();
+const cors = require('cors');
 
 require('dotenv').config();
+app.use(cors());
+app.use(express.json());
 
-router.post('/api/contact', async (req, res) => {
+app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
 
   // 設定郵件傳送器
@@ -36,4 +37,6 @@ router.post('/api/contact', async (req, res) => {
   }
 });
 
-module.exports = router;
+app.listen(8080, () => {
+  console.log('Server is running on port 8080');
+});
