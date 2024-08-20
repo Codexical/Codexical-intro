@@ -1,13 +1,12 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
-const app = express();
-
 const cors = require('cors');
-app.use(cors());
+const nodemailer = require('nodemailer');
 
-app.use(express.json());
+const router = express.Router();
 
-app.post('../api/contact', async (req, res) => {
+require('dotenv').config();
+
+router.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
 
   // 設定郵件傳送器
@@ -37,6 +36,4 @@ app.post('../api/contact', async (req, res) => {
   }
 });
 
-app.listen(8080, () => {
-  console.log('Server is running on port 3000');
-});
+module.exports = router;

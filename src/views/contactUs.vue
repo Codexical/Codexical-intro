@@ -34,7 +34,7 @@ export default {
   methods: {
     async handleSubmit() {
       try {
-        const response = await axios.post('../api/contact', this.form);
+        const response = await axios.post('/api/contact', this.form);
         console.log('表單已成功提交', response.data);
       } catch (error) {
         console.error('提交表單時出錯', error);
