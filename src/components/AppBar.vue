@@ -35,10 +35,10 @@
 export default {
     data: () => ({
         linkOption: [
-            { name: 'Home', url: '#' },
+            { name: 'Home', url: '/' },
             { name: 'About Us', url: '#' },
             { name: 'Services', url: '#' },
-            { name: 'Contact Us', url: '#' }
+            { name: 'Contact Us', url: 'contact' }
         ]
     })
 }
