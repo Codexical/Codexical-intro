@@ -1,0 +1,22 @@
+{
+  "members": [
+    {
+      "name": "YJ Zheng",
+      "position": "D-Link",
+      "description": "",
+      "image": "YJ.png"
+    },
+    {
+      "name": "CC Tsai",
+      "position": "NYCU CS",
+      "description": "",
+      "image": "CC.png"
+    },
+    {
+      "name": "PR Wang",
+      "position": "NCKU CSIE",
+      "description": "",
+      "image": "PR.png"
+    }
+  ]
+}
