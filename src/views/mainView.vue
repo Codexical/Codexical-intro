@@ -37,7 +37,7 @@
                 <v-row class="d-flex align-center mb-5">
                     <v-col cols="12" md="2">
                         <div class="d-flex justify-center">
-                            <v-icon icon="mdi-code-tags-check" size="100"></v-icon>
+                            <v-icon icon="mdi-vuejs" size="100"></v-icon>
                         </div>
                     </v-col>
                     <v-col cols="12" md="10">
