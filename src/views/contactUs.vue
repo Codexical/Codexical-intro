@@ -1,33 +1,34 @@
 <template>
-    <div class="contact-us">
-      <h1 v-motion :initial="{ opacity: 0, x: -100}" :enter="{ opacity: 1, x: 0}" :delay="0" :duration="1000">
-        聯絡我們
+  <div class="contact-us">
+    <h1 v-motion :initial="{ opacity: 0, x: -100}" :enter="{ opacity: 1, x: 0}" :delay="0" :duration="1000" style="text-align: center;">
+      Contact Us
+    </h1>
+    &nbsp;
+    <h2 v-motion :initial="{ opacity: 0, x: -100}" :enter="{ opacity: 1, x: 0}" :delay="0" :duration="1000">
+      Codexical look forward to collaborate with you.
+      <br>
+      If you are intrested in our services.
+      <br> 
+      You can contact us via the following methods.
+    </h2>
+  </div>
+  <div v-motion :initial="{ opacity: 0 }" :visible-once="{ opacity: 1 }" :duration="1000" class="contact-us">
+    <form @submit.prevent="handleSubmit">
+        <div >
+          <label for="message">Email</label>
+          <textarea v-model="message" id="message" required></textarea>
+        </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div>
+      <h1>
+        Others
       </h1>
-      &nbsp;
-      <h2 v-motion :initial="{ opacity: 0, x: -100}" :enter="{ opacity: 1, x: 0}" :delay="0" :duration="1000">
-        期待與您的合作
-        <br>
-        如果您對於我們的服務感興趣
-        <br> 
-        可以透過以下的方式與我們取得聯繫
-      </h2>
-      <form v-motion :initial="{ opacity: 0, x: -100}" :enter="{ opacity: 1, x: 0}" :delay="200" :duration="1000" @submit.prevent="handleSubmit">
-          <div >
-            <label for="message">Email</label>
-            <textarea v-model="message" id="message" required></textarea>
-          </div>
-        <button type="submit">送出</button>
-      </form>
-
-      &nbsp;
-      <div v-motion :initial="{ opacity: 0, x: -100}" :enter="{ opacity: 1, x: 0}" :delay="200" :duration="1000">
-        <h1>
-          其他聯絡方式
-        </h1>
-        <span class="mdi mdi-discord mdi-48px"></span>
-      </div>
+      <span class="mdi mdi-discord mdi-48px"></span>
+      <v-img src="@/assets/line.png" style="width: 48px;"></v-img>
     </div>
-  </template>
+  </div>
+</template>
 <script>
 export default {
   data() {
@@ -47,7 +48,6 @@ export default {
 .contact-us {
     max-width: 600px;
     margin: 0 auto;
-    text-align: center;
 }
 
 label {
