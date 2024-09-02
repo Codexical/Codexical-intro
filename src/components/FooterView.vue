@@ -14,12 +14,21 @@
 export default {
     data: () => ({
         linkOption: [
+        ]
+    }),
+    created() {
+        this.linkOption = sessionStorage.getItem('lang') === 'en' ? [
             { name: 'Home', url: '/' },
             { name: 'About Us', url: 'about' },
             { name: 'Services', url: 'service' },
             { name: 'Contact Us', url: 'contact' }
-        ]
-    })
+        ] : [
+            { name: '首頁', url: '/' },
+            { name: '關於我們', url: 'about' },
+            { name: '服務內容', url: 'service' },
+            { name: '聯絡我們', url: 'contact' }
+        ];
+    }
 }
 </script>
 
