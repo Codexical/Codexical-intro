@@ -1,6 +1,6 @@
 <template>
-    <v-main min-height="88vh" class="d-flex">
-        <v-container class="d-flex align-center justify-center flex-column">
+    <v-main>
+        <v-container style="height: 80vh;" class="d-flex align-center justify-center flex-column">
             <div class="text-center">
                 <div v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :duration="1000">
                     <h1 class="text-h4 text-md-h2 font-weight-bold my-6">
@@ -20,10 +20,8 @@
                 </v-btn>
             </div>
         </v-container>
-    </v-main>
-    <div v-motion :initial="{ opacity: 0 }" :visible-once="{ opacity: 1 }" :duration="1000">
-        <v-main>
-            <v-container>
+        <v-container>
+            <div v-motion :initial="{ opacity: 0 }" :visible-once="{ opacity: 1 }" :duration="1000">
                 <h2 class="text-h2 text-md-h2 font-weight-bold my-6">
                     {{ mainViewContent[language].service.title }}
                 </h2>
@@ -46,12 +44,10 @@
                         </p>
                     </v-col>
                 </v-row>
-            </v-container>
-        </v-main>
-    </div>
-    <div v-motion :initial="{ opacity: 0 }" :visible-once="{ opacity: 1 }" :duration="1000">
-        <v-main class="d-flex pa-5">
-            <v-container>
+            </div>
+        </v-container>
+        <v-container>
+            <div v-motion :initial="{ opacity: 0 }" :visible-once="{ opacity: 1 }" :duration="1000">
                 <v-row>
                     <v-col cols="12" md="6">
                         <h2 class="text-h2 text-md-h2 font-weight-bold my-6">
@@ -94,11 +90,9 @@
                         </v-row>
                     </v-col>
                 </v-row>
-            </v-container>
-        </v-main>
-    </div>
-    <div v-motion :initial="{ opacity: 0 }" :visible-once="{ opacity: 1 }" :duration="1000">
-        <v-main class="d-flex pa-5">
+            </div>
+        </v-container>
+        <div v-motion :initial="{ opacity: 0 }" :visible-once="{ opacity: 1 }" :duration="1000">
             <v-container>
                 <v-responsive class="text-center mx-auto" max-width="700">
                     <h2 class="text-h2 text-md-h2 font-weight-bold my-6">
@@ -117,8 +111,8 @@
                     </v-col>
                 </v-row>
             </v-container>
-        </v-main>
-    </div>
+        </div>
+    </v-main>
 </template>
 
 <script>
@@ -140,7 +134,6 @@ export default {
     },
     methods: {
         loadData() {
-
             for (let i = 0; i < members['members'].length; i++) {
                 this.teamMembers.push({
                     name: members['members'][i].name,
