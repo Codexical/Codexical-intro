@@ -1,7 +1,8 @@
 <template>
     <footer class="footer">
         <v-row class="options">
-            <v-btn v-for="link in linkOption" :key="link.name" variant="text" :href="link.url">{{ link.name }}</v-btn>
+            <v-btn v-for="link in linkOption" :key="link.name" variant="text" :href="link.url">{{ link.name
+                }}</v-btn>
         </v-row>
         <div class="copyright">
             &copy; 2024 Codexical. All rights reserved.
@@ -19,7 +20,8 @@ export default {
             { name: 'Contact Us', url: 'contact' }
         ]
     })
-}</script>
+}
+</script>
 
 <style scoped>
 .footer {
@@ -36,7 +38,6 @@ export default {
     display: flex;
     justify-content: center;
 }
-
 
 .copyright {
     font-size: 0.8rem;
