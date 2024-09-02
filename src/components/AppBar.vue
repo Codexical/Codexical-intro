@@ -7,6 +7,7 @@
             :style="{ color: '#C5705D', fontSize: '30px', fontWeight: 'bold' }">Codexical</v-toolbar-title>
         <div id="computer">
             <v-btn v-for="link in linkOption" :key="link.name" :href="link.url" text>{{ link.name }}</v-btn>
+            <v-btn @click="changeLang">中文/English</v-btn>
         </div>
         <div id="mobile">
             <v-dialog max-width="340" transition="scale-transition">
@@ -20,6 +21,7 @@
                                 <v-btn class="ma-1" v-for="link in linkOption" :key="link.name" :href="link.url"
                                     variant="text">{{
                                         link.name }}</v-btn>
+                                <v-btn class="ma-1" @click="changeLang">中文/English</v-btn>
                             </div>
                         </v-card-item>
                     </v-card>
@@ -39,7 +41,18 @@ export default {
             { name: 'Services', url: 'service' },
             { name: 'Contact Us', url: 'contact' }
         ]
-    })
+    }),
+    created() {
+        if (!sessionStorage.getItem('lang')) {
+            sessionStorage.setItem('lang', 'zh');
+        }
+    },
+    methods: {
+        changeLang() {
+            sessionStorage.setItem('lang', sessionStorage.getItem('lang') === 'en' ? 'zh' : 'en');
+            location.reload();
+        }
+    }
 }
 </script>
 
@@ -68,7 +81,7 @@ export default {
     display: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     #computer {
         display: none;
     }
