@@ -4,12 +4,12 @@
             <div class="text-center">
                 <div v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :duration="1000">
                     <h1 class="text-h4 text-md-h2 font-weight-bold my-6">
-                        Weaving Dreams with code.
+                        {{ mainViewContent[language].title }}
                     </h1>
                 </div>
                 <div v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :delay="500" :duration="500">
                     <div class="text-body-1 text-medium-emphasis mb-10">
-                        為您的數位願景賦予生命
+                        {{ mainViewContent[language].description }}
                     </div>
                 </div>
             </div>
@@ -25,79 +25,24 @@
         <v-main>
             <v-container>
                 <h2 class="text-h2 text-md-h2 font-weight-bold my-6">
-                    What we can do for you.
+                    {{ mainViewContent[language].service.title }}
                 </h2>
                 <div class="text-body-1 text-medium-emphasis mb-5">
-                    We offer a range of services to help you create a website that meets your needs. From web
-                    design to
-                    development, we can help you every step of the way. Our team is dedicated to delivering
-                    high-quality
-                    websites that are tailored to your business.
+                    {{ mainViewContent[language].service.description }}
                 </div>
-                <v-row class="d-flex align-center mb-5">
+                <v-row class="d-flex align-center mb-5" v-for="(service, i) in mainViewContent[language].service.list"
+                    :key="i">
                     <v-col cols="12" md="2">
                         <div class="d-flex justify-center">
-                            <v-icon icon="mdi-vuejs" size="100"></v-icon>
+                            <v-icon :icon="service.icon" size="100"></v-icon>
                         </div>
                     </v-col>
                     <v-col cols="12" md="10">
                         <p class="text-h5 text-md-h5 font-weight-bold">
-                            Frontend Development
+                            {{ service.title }}
                         </p>
                         <p class="text-body-1 text-medium-emphasis">
-                            Our team builds dynamic and responsive user interfaces using modern technologies like Vue,
-                            Vuetify, CSS, and JavaScript. We focus on creating visually appealing and user-friendly
-                            designs that engage your audience.
-                        </p>
-                    </v-col>
-                </v-row>
-                <v-row class="d-flex align-center mb-5">
-                    <v-col cols="12" md="2">
-                        <div class="d-flex justify-center">
-                            <v-icon icon="mdi-language-python" size="100"></v-icon>
-                        </div>
-                    </v-col>
-                    <v-col cols="12" md="10">
-                        <p class="text-h5 text-md-h5 font-weight-bold">
-                            Backend Development
-                        </p>
-                        <p class="text-body-1 text-medium-emphasis">
-                            Our back-end expertise includes using Flask, FastAPI, and Django to create robust and
-                            scalable server-side applications. We ensure your website operates efficiently and handles
-                            complex data interactions securely.
-                        </p>
-                    </v-col>
-                </v-row>
-                <v-row class="d-flex align-center mb-5">
-                    <v-col cols="12" md="2">
-                        <div class="d-flex justify-center">
-                            <v-icon icon="mdi-docker" size="100"></v-icon>
-                        </div>
-                    </v-col>
-                    <v-col cols="12" md="10">
-                        <p class="text-h5 text-md-h5 font-weight-bold">
-                            Web Deployment
-                        </p>
-                        <p class="text-body-1 text-medium-emphasis">
-                            We deploy your website using Docker and Kubernetes (k8s) for reliable, scalable, and
-                            efficient hosting. Our deployment strategies ensure your site remains accessible and
-                            performs well under varying loads.
-                        </p>
-                    </v-col>
-                </v-row>
-                <v-row class="d-flex align-center mb-5">
-                    <v-col cols="12" md="2">
-                        <div class="d-flex justify-center">
-                            <v-icon icon="mdi-database" size="100"></v-icon>
-                        </div>
-                    </v-col>
-                    <v-col cols="12" md="10">
-                        <p class="text-h5 text-md-h5 font-weight-bold">
-                            Database Management
-                        </p>
-                        <p class="text-body-1 text-medium-emphasis">
-                            We use PostgreSQL to manage and store your data effectively. Our database solutions are
-                            designed for reliability and performance, supporting your website's and its users' needs.
+                            {{ service.description }}
                         </p>
                     </v-col>
                 </v-row>
@@ -110,12 +55,10 @@
                 <v-row>
                     <v-col cols="12" md="6">
                         <h2 class="text-h2 text-md-h2 font-weight-bold my-6">
-                            Meet Our Team.
+                            {{ mainViewContent[language].team.title }}
                         </h2>
                         <div class="text-body-1 text-medium-emphasis mb-10">
-                            Our team is made up of talented web developers and designers. We work together to create
-                            websites that are both beautiful and functional. Each member brings their skills and
-                            creativity, ensuring we deliver our clients the best results.
+                            {{ mainViewContent[language].team.description }}
                         </div>
                     </v-col>
                     <v-col cols="12" md="6">
@@ -144,8 +87,8 @@
                                 <div v-motion :initial="{ opacity: 0, x: -100 }" :visible-once="{ opacity: 1, x: 0 }"
                                     :duration="500">
                                     <v-card :style="{ backgroundColor: '#F5E5D7' }" class="mx-auto" href="about"
-                                        prepend-icon="mdi-account-multiple" rel="noopener" target="_blank"
-                                        title="Learn more about our team."></v-card>
+                                        prepend-icon="mdi-account-multiple" rel="noopener"
+                                        :title="mainViewContent[language].team.moreInfo"></v-card>
                                 </div>
                             </v-col>
                         </v-row>
@@ -159,15 +102,11 @@
             <v-container>
                 <v-responsive class="text-center mx-auto" max-width="700">
                     <h2 class="text-h2 text-md-h2 font-weight-bold my-6">
-                        Everything we used to create a website.
+                        {{ mainViewContent[language].tools.title }}
                     </h2>
 
                     <p class="mt-4 text-body-1 text-medium-emphasis">
-                        We use the best tools and technologies to build websites. From coding languages to design
-                        software,
-                        everything we use is top quality. We aim to create websites that are easy to use and look great
-                        on
-                        any device.
+                        {{ mainViewContent[language].tools.description }}
                     </p>
                 </v-responsive>
                 <v-row class="mt-10 mx-10">
@@ -183,13 +122,17 @@
 </template>
 
 <script>
-import members from '@/assets/member.json';
 import features from '@/assets/features.json';
+import mainViewContent from '@/assets/mainView.json';
+import members from '@/assets/member.json';
 export default {
     data() {
         return {
-            teamMembers: [],
-            features: []
+            features: [],
+            language: sessionStorage.getItem('lang'),
+            mainViewContent: mainViewContent,
+            services: [],
+            teamMembers: []
         };
     },
     created() {
@@ -197,6 +140,7 @@ export default {
     },
     methods: {
         loadData() {
+
             for (let i = 0; i < members['members'].length; i++) {
                 this.teamMembers.push({
                     name: members['members'][i].name,
