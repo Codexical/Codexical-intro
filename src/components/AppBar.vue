@@ -21,7 +21,7 @@
                                 <v-btn class="ma-1" v-for="link in linkOption" :key="link.name" :href="link.url"
                                     variant="text">{{
                                         link.name }}</v-btn>
-                                <v-btn class="ma-1" @click="changeLang">中文/English</v-btn>
+                                <v-btn class="ma-1" @click="changeLang" variant="text">中文/English</v-btn>
                             </div>
                         </v-card-item>
                     </v-card>
@@ -35,17 +35,23 @@
 export default {
     data: () => ({
         logo: require('@/assets/logo.png'),
-        linkOption: [
-            { name: 'Home', url: '/' },
-            { name: 'About Us', url: 'about' },
-            { name: 'Services', url: 'service' },
-            { name: 'Contact Us', url: 'contact' }
-        ]
+        linkOption: []
     }),
     created() {
         if (!sessionStorage.getItem('lang')) {
             sessionStorage.setItem('lang', 'zh');
         }
+        this.linkOption = sessionStorage.getItem('lang') === 'en' ? [
+            { name: 'Home', url: '/' },
+            { name: 'About Us', url: 'about' },
+            { name: 'Services', url: 'service' },
+            { name: 'Contact Us', url: 'contact' }
+        ] : [
+            { name: '首頁', url: '/' },
+            { name: '關於我們', url: 'about' },
+            { name: '服務內容', url: 'service' },
+            { name: '聯絡我們', url: 'contact' }
+        ];
     },
     methods: {
         changeLang() {
@@ -69,9 +75,9 @@ export default {
     }
 }
 
-.v-app-bar {
+/* .v-app-bar {
     animation: AppBar 0.5s;
-}
+} */
 
 #computer {
     display: block;
