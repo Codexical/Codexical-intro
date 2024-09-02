@@ -13,19 +13,18 @@
 export default {
     data: () => ({
         linkOption: [
-            { name: 'Home', url: '#' },
-            { name: 'About Us', url: '#' },
-            { name: 'Services', url: '#' },
-            { name: 'Contact Us', url: '#' }
+            { name: 'Home', url: '/' },
+            { name: 'About Us', url: 'about' },
+            { name: 'Services', url: 'service' },
+            { name: 'Contact Us', url: 'contact' }
         ]
     })
 }</script>
 
 <style scoped>
 .footer {
-    background-color: #f5f5f5;
+    background-color: #D0B8A8;
     padding: 1rem 0;
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
