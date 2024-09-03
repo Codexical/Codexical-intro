@@ -1,6 +1,6 @@
 <template>
     <v-main>
-        <v-container style="height: 80vh;" class="d-flex align-center justify-center flex-column">
+        <v-container style="height: 85vh;" class="d-flex align-center justify-center flex-column">
             <div class="text-center">
                 <div v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1 }" :duration="1000">
                     <h1 class="text-h4 text-md-h2 font-weight-bold my-6">
@@ -92,8 +92,8 @@
                 </v-row>
             </div>
         </v-container>
-        <div v-motion :initial="{ opacity: 0 }" :visible-once="{ opacity: 1 }" :duration="1000">
-            <v-container>
+        <v-container>
+            <div v-motion :initial="{ opacity: 0 }" :visible-once="{ opacity: 1 }" :duration="1000">
                 <v-responsive class="text-center mx-auto" max-width="700">
                     <h2 class="text-h2 text-md-h2 font-weight-bold my-6">
                         {{ mainViewContent[language].tools.title }}
@@ -110,8 +110,8 @@
                             :title="item.title"></v-card>
                     </v-col>
                 </v-row>
-            </v-container>
-        </div>
+            </div>
+        </v-container>
     </v-main>
 </template>
 
@@ -152,10 +152,16 @@ export default {
         },
         scrollDown() {
             window.scrollBy({
-                top: window.innerHeight * 0.88,
+                top: window.innerHeight,
                 behavior: 'smooth'
             });
         }
     }
 }
 </script>
+
+<style scoped>
+.v-container {
+    margin-bottom: 10vh;
+}
+</style>
