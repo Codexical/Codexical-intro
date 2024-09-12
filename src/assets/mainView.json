@@ -1,0 +1,80 @@
+{
+  "zh": {
+    "title": "用程式碼編織夢想",
+    "description": "為您的數位願景賦予生命",
+    "service": {
+      "title": "我們能為您做什麼",
+      "description": "我們提供一系列服務，幫助您創建符合您需求的網站。從網頁設計到開發，我們可以在每一步幫助您。我們的團隊致力於提供高質量的網站，並根據您的業務需求量身定制。",
+      "list": [
+        {
+          "icon": "mdi-vuejs",
+          "title": "前端開發",
+          "description": "我們的團隊使用現代技術，如Vue、Vuetify、CSS和JavaScript，構建動態和響應式用戶界面。我們專注於創建視覺上吸引人且用戶友好的設計，以吸引您的受眾。"
+        },
+        {
+          "icon": "mdi-language-python",
+          "title": "後端開發",
+          "description": "我們的後端專業知識包括使用Flask、FastAPI和Django來創建強大且可擴展的服務器端應用程序。我們確保您的網站運行高效並安全地處理複雜的數據交互。"
+        },
+        {
+          "icon": "mdi-docker",
+          "title": "網站部署",
+          "description": "我們使用Docker和Kubernetes（k8s）部署您的網站，以實現可靠、可擴展和高效的主機。我們的部署策略確保您的網站在不同負載下保持可訪問並表現良好。"
+        },
+        {
+          "icon": "mdi-server",
+          "title": "資料庫管理",
+          "description": "我們使用PostgreSQL有效管理和存儲您的數據。我們的數據庫解決方案旨在實現可靠性和性能，支持您的網站及其用戶的需求。"
+        }
+      ]
+    },
+    "team": {
+      "title": "認識我們的團隊",
+      "description": "我們的團隊由才華橫溢的網頁開發人員和設計師組成。我們共同努力，創建既美觀又功能強大的網站。每位成員都帶來自己的技能和創造力，確保我們為客戶提供最佳結果。",
+      "moreInfo": "了解更多關於我們的團隊"
+    },
+    "tools": {
+      "title": "我們用來創建網站的一切",
+      "description": "我們使用最好的工具和技術來構建網站。從編程語言到設計軟件，我們使用的一切都是高品質的。我們的目標是創建易於使用且在任何設備上看起來出色的網站。"
+    }
+  },
+  "en": {
+    "title": "Weaving Dreams with code.",
+    "description": "Bringing your digital vision to life.",
+    "service": {
+      "title": "What we can do for you.",
+      "description": "We offer a range of services to help you create a website that meets your needs. From web design to development, we can help you every step of the way. Our team is dedicated to delivering high-quality websites that are tailored to your business.",
+      "list": [
+        {
+          "icon": "mdi-vuejs",
+          "title": "Frontend Development",
+          "description": "Our team builds dynamic and responsive user interfaces using modern technologies like Vue, Vuetify, CSS, and JavaScript. We focus on creating visually appealing and user-friendly designs that engage your audience."
+        },
+        {
+          "icon": "mdi-language-python",
+          "title": "Backend Development",
+          "description": "Our back-end expertise includes using Flask, FastAPI, and Django to create robust and scalable server-side applications. We ensure your website operates efficiently and handles complex data interactions securely."
+        },
+        {
+          "icon": "mdi-docker",
+          "title": "Web Deployment",
+          "description": "We deploy your website using Docker and Kubernetes (k8s) for reliable, scalable, and efficient hosting. Our deployment strategies ensure your site remains accessible and performs well under varying loads."
+        },
+        {
+          "icon": "mdi-server",
+          "title": "Database Management",
+          "description": "We use PostgreSQL to manage and store your data effectively. Our database solutions are designed for reliability and performance, supporting your website's and its users' needs."
+        }
+      ]
+    },
+    "team": {
+      "title": "Meet Our Team.",
+      "description": "Our team is made up of talented web developers and designers. We work together to create websites that are both beautiful and functional. Each member brings their skills and creativity, ensuring we deliver our clients the best results.",
+      "moreInfo": "Learn more about our team."
+    },
+    "tools": {
+      "title": "Everything we used to create a website.",
+      "description": "We use the best tools and technologies to build websites. From coding languages to design software, everything we use is top quality. We aim to create websites that are easy to use and look great on any device."
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "features": [
+    {
+      "title": "HTML5",
+      "icon": "mdi-language-html5",
+      "herf": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+    },
+    {
+      "title": "CSS3",
+      "icon": "mdi-language-css3",
+      "herf": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    {
+      "title": "JavaScript",
+      "icon": "mdi-language-javascript",
+      "herf": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+      "title": "Vue.js",
+      "icon": "mdi-vuejs",
+      "herf": "https://vuejs.org/"
+    },
+    {
+      "title": "Vuetify",
+      "icon": "mdi-vuetify",
+      "herf": "https://vuetifyjs.com/en/"
+    },
+    {
+      "title": "Node.js",
+      "icon": "mdi-nodejs",
+      "herf": "https://nodejs.org/en/"
+    },
+    {
+      "title": "FastAPI",
+      "icon": "mdi-language-python",
+      "herf": "https://fastapi.tiangolo.com/"
+    },
+    {
+      "title": "Flask",
+      "icon": "mdi-language-python",
+      "herf": "https://flask.palletsprojects.com/"
+    },
+    {
+      "title": "Django",
+      "icon": "mdi-language-python",
+      "herf": "https://www.djangoproject.com/"
+    },
+    {
+      "title": "PostgreSQL",
+      "icon": "mdi-database",
+      "herf": "https://www.postgresql.org/"
+    },
+    {
+      "title": "Docker",
+      "icon": "mdi-docker",
+      "herf": "https://www.docker.com/"
+    },
+    {
+      "title": "Kubernetes",
+      "icon": "mdi-kubernetes",
+      "herf": "https://kubernetes.io/"
+    }
+  ]
+}

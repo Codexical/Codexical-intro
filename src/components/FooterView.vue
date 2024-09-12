@@ -1,7 +1,8 @@
 <template>
     <footer class="footer">
         <v-row class="options">
-            <v-btn v-for="link in linkOption" :key="link.name" variant="text" :href="link.url">{{ link.name }}</v-btn>
+            <v-btn v-for="link in linkOption" :key="link.name" variant="text" :href="link.url">{{ link.name
+                }}</v-btn>
         </v-row>
         <div class="copyright">
             &copy; 2024 Codexical. All rights reserved.
@@ -13,19 +14,28 @@
 export default {
     data: () => ({
         linkOption: [
-            { name: 'Home', url: '/' },
-            { name: 'About Us', url: '#' },
-            { name: 'Services', url: '#' },
-            { name: 'Contact Us', url: 'contact' }
         ]
-    })
-}</script>
+    }),
+    created() {
+        this.linkOption = sessionStorage.getItem('lang') === 'en' ? [
+            { name: 'Home', url: '/' },
+            { name: 'About Us', url: 'about' },
+            { name: 'Services', url: 'service' },
+            { name: 'Contact Us', url: 'contact' }
+        ] : [
+            { name: '首頁', url: '/' },
+            { name: '關於我們', url: 'about' },
+            { name: '服務內容', url: 'service' },
+            { name: '聯絡我們', url: 'contact' }
+        ];
+    }
+}
+</script>
 
 <style scoped>
 .footer {
-    background-color: #f5f5f5;
+    background-color: #D0B8A8;
     padding: 1rem 0;
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +47,6 @@ export default {
     display: flex;
     justify-content: center;
 }
-
 
 .copyright {
     font-size: 0.8rem;

@@ -1,0 +1,15 @@
+{
+    "zh": {
+      "title": "聯絡我們",
+      "Description": "Codexical 非常期待與您的合作，如果您對於我們的服務有興趣，可以透過email聯絡我們。",
+      "EmailDescription": "請詳細的說明您的需求，我們會盡快回覆！",
+      "OtherContact": "或者，您也可以從以下方式聯絡到我們"
+    },
+    "en": {
+      "title": "Contact",
+      "Description": "Codexical look forward to collaborate with you, If you are intrested in our services, You can contact us via email.",
+      "EmailDescription": "Please provide your requirement in detail, we weill reply ASAP!",
+      "OtherContact": "Or, you can also reach us by"
+    }
+}
+  
