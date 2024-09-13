@@ -1,54 +1,62 @@
 <template>
-    <div class="contact-us">
-      <h1>聯絡我們</h1>
-      <form @submit.prevent="handleSubmit">
-        <div>
-          <label for="name">姓名:</label>
-          <input type="text" v-model="form.name" id="name" required>
-        </div>
-        <div>
-          <label for="email">電子郵件:</label>
-          <input type="email" v-model="form.email" id="email" required>
-        </div>
-        <div>
-          <label for="message">訊息:</label>
-          <textarea v-model="form.message" id="message" required></textarea>
-        </div>
-        <button type="submit">送出</button>
-      </form>
-    </div>
-  </template>
-  
+  <v-main>
+    <v-container style="margin-bottom: 20vh;">
+      <div>
+        <h1 v-motion :initial="{ opacity: 0, y: 100 }" :enter="{ opacity: 1, y: 0}" :delay="0" :duration="1000">
+          {{ contactUsContent[language].title }}
+        </h1>
+        &nbsp;
+        <h2 v-motion :initial="{ opacity: 0, y: 100 }" :enter="{ opacity: 1, y: 0}" :delay="0" :duration="1000">
+          {{ contactUsContent[language].Description }}
+        </h2>
+      </div>
+      <div v-motion :initial="{ opacity: 0, y: 100 }" :visible-once="{ opacity: 1, y: 0 }" :delay="1500" :duration="1000" style="margin-top: 5vh; text-align: center;">
+        <form @submit.prevent="handleSubmit">
+            <div >
+              <label for="message">{{ contactUsContent[language].EmailDescription }}</label>
+              <textarea v-model="message" id="message" required></textarea>
+            </div>
+          <button id="submit" type="submit">Submit</button>
+        </form>
+      </div>
+    </v-container>
+    <v-container>
+      <div v-motion :initial="{ opacity: 0 }" :visible-once="{ opacity: 1 }" :duration="1000">
+        <h2>
+          {{ contactUsContent[language].OtherContact }}
+        </h2>
+        <v-btn height="70px" width="70px" variant="text" href="https://discord.gg/MX5VBqtw3r" target="_blank">
+          <v-icon icon="mdi-discord" size="60" ></v-icon>
+        </v-btn>
+      </div>
+    </v-container>
+  </v-main>
+</template>
+
 <script>
-import axios from 'axios';
+import contactUsContent from '@/assets/contactUs.json';
 export default {
   data() {
     return {
-      form: {
-        name: '',
-        email: '',
-        message: ''
-      }
+      message: '',
+      language: sessionStorage.getItem('lang'),
+      contactUsContent: contactUsContent
     };
   },
   methods: {
     async handleSubmit() {
-      try {
-        const response = await axios.post('/api/contact', this.form);
-        console.log('表單已成功提交', response.data);
-      } catch (error) {
-        console.error('提交表單時出錯', error);
-      }
+      window.open(`mailto:abc@example.com?subject=合作邀約&body=${this.message}`);
     }
   }
 };
-
 </script>
 
 <style scoped>
-.contact-us {
+.v-container {
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: 10vh;
+    text-align: center;
 }
 
 label {
@@ -64,16 +72,15 @@ input, textarea {
     border-radius: 4px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+#submit{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-
-button:hover {
-    background-color: #45a049;
+#submit:hover {
+  background-color: #45a049;
 }
 </style>
