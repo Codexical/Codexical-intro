@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     async handleSubmit() {
-      window.open(`mailto:abc@example.com?subject=合作邀約&body=${this.message}`);
+      window.open(`mailto:contact@codex.tw?subject=合作邀約&body=${this.message}`);
     }
   }
 };
