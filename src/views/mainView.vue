@@ -80,12 +80,12 @@
                                         </v-card>
                                     </div>
                                 </div>
-                                <div v-motion :initial="{ opacity: 0, x: -100 }" :visible-once="{ opacity: 1, x: 0 }"
+                                <!-- <div v-motion :initial="{ opacity: 0, x: -100 }" :visible-once="{ opacity: 1, x: 0 }"
                                     :duration="500">
                                     <v-card :style="{ backgroundColor: '#F5E5D7' }" class="mx-auto" href="about"
                                         prepend-icon="mdi-account-multiple" rel="noopener"
                                         :title="mainViewContent[language].team.moreInfo"></v-card>
-                                </div>
+                                </div> -->
                             </v-col>
                         </v-row>
                     </v-col>
