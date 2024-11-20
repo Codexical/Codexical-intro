@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build && node ./deploy/ghpages.js"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
@@ -14,6 +15,7 @@
     "core-js": "^3.8.3",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "gh-pages": "^6.2.0",
     "nodemailer": "^6.9.14",
     "roboto-fontface": "*",
     "store": "^2.0.12",
