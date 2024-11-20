@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkcodexical_intro"]=self["webpackChunkcodexical_intro"]||[]).push([[149],{3149:function(n,e,t){t.r(e),t.d(e,{default:function(){return l}});var c=t(6768);const r={class:"d-flex justify-center pt-3"},u=(0,c.Lk)("h1",null,"Page not found",-1),o=[u];function a(n,e){return(0,c.uX)(),(0,c.CE)("div",r,o)}var i=t(3622);const s={},f=(0,i.A)(s,[["render",a]]);var l=f}}]);
+//# sourceMappingURL=149.7811f9c3.js.map
