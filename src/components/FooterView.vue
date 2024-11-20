@@ -18,23 +18,36 @@ export default {
     }),
     created() {
         this.linkOption = sessionStorage.getItem('lang') === 'en' ? [
-            { name: 'Home', url: '/' },
+            { name: 'Home', url: '#/' },
             // { name: 'About Us', url: 'about' },
             // { name: 'Services', url: 'service' },
-            { name: 'Contact Us', url: 'contact' }
+            { name: 'Contact Us', url: '#/contact' }
         ] : [
-            { name: '首頁', url: '/' },
+            { name: '首頁', url: '#/' },
             // { name: '關於我們', url: 'about' },
             // { name: '服務內容', url: 'service' },
-            { name: '聯絡我們', url: 'contact' }
+            { name: '聯絡我們', url: '#/contact' }
         ];
     }
 }
 </script>
 
 <style scoped>
+@keyframes backgroundColorChange {
+    from {
+        background-color: #F8EDE3;
+        color: #F8EDE3;
+
+    }
+
+    to {
+        background-color: #D0B8A8;
+        color: black;
+    }
+}
+
 .footer {
-    background-color: #D0B8A8;
+    animation: backgroundColorChange 1s forwards;
     padding: 1rem 0;
     display: flex;
     flex-direction: column;
